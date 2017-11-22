@@ -47,11 +47,18 @@ function modification(){
     	type: 'GET',
     	dataType: 'xml',
     	error: function(){
-			alert('Erreur chargement');
+    		console.log("non");
 		},
-		success: function(data){
-			alert(data);
-       		$("#modif").text(data);
-		}
+		success: function(xml){
+            console.log("oui");
+    		var donnee= "";
+            $(xml).find('track').each(function(){
+                var location = $(this).find('location').text();
+                var title =$(this).find('title').text();
+                var creator =$(this).find('creator').text();
+                donnee += "<tr><td>"+location+"</td><td>"+title+"</td><td>"+creator+"</td></tr>";
+            });
+            $("#modif").html(donnee);
+        }
     });
 }
