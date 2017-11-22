@@ -1,0 +1,243 @@
+/*CSS */
+#wrapper{ 
+position : relative; 
+width : 770px; 
+margin : 50px auto; 
+	
+
+}
+
+
+/************************/
+/*	Header 			*/
+/************************/
+#wrapper>header{
+height : 120px;
+background : transparent url(../images/branding.png) no-repeat 0 0;  
+position:relative;}
+
+/*remplacement logo*/
+#wrapper>header h1 a { 
+display: block;
+position : absolute;    /*ou relative*/
+top : -70px; 
+left : -80px;
+width : 550px; 
+height : 180px; 
+background : transparent url(../images/h1.png) no-repeat;
+text-indent : -9999px;
+outline:none;
+ }
+
+#wrapper>header blockquote { 
+position : absolute;
+right : 0;
+top : 20px;
+width : 120px;
+color: white;
+text-align : right;
+ }
+ 
+/************************/
+/*	Menu 				*/
+/************************/
+
+nav{ 
+height : 90px;
+position:relative;
+overflow: hidden;
+background-color : #f1efe2;}
+
+nav+p {
+	position : absolute;
+	left: 20px;
+	top :170px;
+	
+}
+
+
+
+
+/* navigation secondaire*/
+
+nav ul:first-child {
+background:url(../images/couleur_jaune.jpg) repeat;
+height : 25px;
+width:460px;
+padding-left:310px;
+ }
+
+
+nav ul:first-child li {
+display : inline; }
+
+nav ul:first-child li a {
+margin-right : 20px;
+padding-right : 10px;
+ }
+
+nav ul:first-child li:last-child a {
+margin-left: 100px;
+}
+
+/*navigation principale */
+
+nav ul:last-child{
+padding-top :10px;
+margin-left:320px;
+width : 450px;
+
+}
+
+
+nav li#nav_signup a,nav li#nav_dishup a,nav li#nav_washup  a{
+float:left;
+display : block;
+display : block;
+height : 50px; 
+width : 140px;
+margin-left:10px; 
+text-indent:-9999px;
+}
+
+
+
+
+nav li#nav_signup a{background:url(../images/signup.jpg);}
+nav li#nav_dishup a{background:url(../images/dishup.jpg);}
+nav li#nav_washup  a{background:url(../images/washup.jpg);}
+
+
+
+
+/************************/
+/*	Contenu 				*/
+/************************/
+
+/*
+div#content { 
+position : relative; 
+width : 100%; 
+overflow:hidden;}
+*/
+ aside{
+ 	background-color: white;
+ 	position:relative;
+ }
+
+
+aside section:first-child h1{
+	padding-left : 120px;
+}
+
+
+div#wrapper>article {
+float: right;
+width : 50%; 
+padding : 1em 0; }
+  
+div#wrapper>aside{ 
+float:left;
+width : 50%; 
+padding : 1em 0; }
+
+
+/************************/
+/*	Liste recette similaires 				*/
+/************************/
+
+li img{
+  position : absolute;}
+  
+li#brioche img{
+    top: 50px;
+    left:20px;
+  }
+
+li#pain img{
+    top: 150px;
+    left:20px;
+  }
+  
+  
+li#pain p,li#brioche p, li#pain h3, li#brioche h3{
+   margin-left : 120px;
+  }
+
+
+
+
+ 
+/************************/
+/*	Footer 				*/
+/************************/
+
+ 
+
+footer{ 
+clear:both;
+background : transparent url(../images/site_info.png) no-repeat 0 0; 
+height : 120px;
+position : relative;}
+
+ 
+
+
+footer h4 { 
+position : absolute;
+right : 10px; 
+bottom : 10px;
+width : 150px; 
+height : 70px; 
+
+}
+
+footer h4 a { 
+display : block;
+width : 150px; 
+height : 70px; 
+text-indent : -9999px; }
+
+footer p { 
+position : absolute;
+left : 10px; 
+top : 10px;
+margin : 0; }
+
+footer h4 + p { 
+text-indent : -9999px; } 
+
+
+/************************/
+/*	les images			*/
+/************************/
+img{
+  border : 2px solid #eee;
+  padding : 5px;
+   }
+
+ img#image2{
+     position : relative;
+    left: 50px;
+}
+
+/************************/
+/*	Jquery				*/
+/************************/
+
+
+img.voyante{
+  width:150px ;
+}
+
+img.discrete{
+  width:70px ;
+}
+
+
+
+
+
+
+
+

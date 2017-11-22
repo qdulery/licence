@@ -1,0 +1,14 @@
+/*taille de police : 72%, type de police : Trebuchet MS", "Lucida Grande","Lucida Sans Unicode", Verdana, sans-serif.*/
+body{
+	font-size:72%;
+	font-family: "Trebuchet MS", "Lucida Grande","Lucida Sans Unicode", Verdana, sans-serif;
+	color:#333;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+}
+
+header,nav{
+	background: #eee;
+}

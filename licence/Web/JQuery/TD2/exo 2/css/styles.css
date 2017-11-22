@@ -1,0 +1,51 @@
+body{ font-family: 'Open Sans', sans-serif; color : #666; padding :0 30px ;}
+
+
+h1{ font-size : 2em ; font-weight: bold ; padding : 30px ;}
+
+
+/***** Classe génériques ********************************/
+
+.inverse{background-color: #666; color : darkgrey ;}
+
+.lienSecondaire{ text-decoration : none ; color :  inherit ;}
+.lienSecondaire:hover{  background-color: #ddd ;}
+
+/**** MENU*******************************************************************/
+a{transition : 0.5s ease all ; border-radius: 3px 3px 0 0 ;}
+
+nav {border : 1px solid darkgrey ;border-width: 0px 0 1px 0; margin : 15px 10px ; padding-left : 10px ; }
+
+nav li{display: inline-block ;   }
+
+nav a{text-decoration: none ; color : inherit ; display : block ; padding : 10px ; }
+
+nav a:hover{background-color: darkgrey ; }
+
+nav a.actuel{background-color: #666; color : #DDD ;}
+
+/*********** Articles **************************************************/
+main{width : 50% ; min-width : 800px ; line-height: 1.3em ; padding-bottom: 3em;}
+@media screen and (max-width:800px){ main{width : 100% ; min-width :200px ;}}
+main em{font-style: italic ;}
+article{ padding : 0px 20px ; text-align: justify ;}
+article h2{font-weight: bold ; font-size: 1.5em ; padding : 10px  0 5px 0 ;}
+article h3{font-weight: bold ; font-size: 1.2em ; padding : 5px  0 0 0 ; }
+article h4{font-weight:600 ; font-size: 1em ; padding : 5px  0 0 1em ;}
+
+article p{padding : 5px 0 10px 0;}
+
+article ul{list-style-type:disc ; list-style-position: outside; padding : 10px 0 15px 30px ;}
+article ul li{ padding-bottom: 10px ;}
+article pre{font-style: italic ;}
+/**************** Footer ************************************/
+footer{
+    position : fixed ; bottom: 0 ; left : 0 ;
+    padding : 5px 0 15px 25px;
+    width : 100% ;
+    background-color: rgba(256,256,256,0.8) ;}
+
+footer p {border-top : 1px solid darkgrey ; padding : 5px 0 0 0; display : inline-block ;}
+#versLeTop{ margin-right : 1em ; padding : 4px ; display : inline-block ;}
+a#versLeTop{ text-decoration : none ; color : inherit;}
+a#versLeTop:hover{background-color: darkgrey ;}
