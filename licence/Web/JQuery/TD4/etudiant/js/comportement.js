@@ -56,7 +56,8 @@ function modification(){
                 var location = $(this).find('location').text();
                 var title =$(this).find('title').text();
                 var creator =$(this).find('creator').text();
-                donnee += "<tr><td>"+location+"</td><td>"+title+"</td><td>"+creator+"</td></tr>";
+                var album =$(this).find('album').text();
+                donnee += "<caption>"+album+"</caption><tr><td>"+location+"</td><td>"+title+"</td><td>"+creator+"</td></tr>";
             });
             $("#modif").html(donnee);
         }
