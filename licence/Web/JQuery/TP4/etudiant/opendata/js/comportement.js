@@ -38,7 +38,7 @@ function traitementCafe(data){
     $.each(data.records, function(i, e){
         console.log(e.fields.nom_du_cafe);
         var li = $("<li/>").attr("data-arrondissement", e.fields.arrondissement).text(e.fields.nom_du_cafe).appendTo(ul);
-        li.click(clickLi);
+        li.mouseover(clickLi);
     });
 }
 
