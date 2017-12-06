@@ -2,35 +2,41 @@
  * Created by qdulery on 06/12/2017.
  */
 
-(function($)
-{
-    $.fn.menu=function(options)
-    {
-        var defauts=
-        {
-            "vitesseSlideUp":"slow",
-            "vitesseSlideDown":"fast",
-            "nameSousListe":"sousListe"
-        };
+$(document).ready(init());
 
-        var param=$.extend(defauts,options);
-
-
+function init(){
+    $.fn.menu=function(options){
         return this.each(function(){
+            var defauts={
+                "vitesseSlideUp":"slow",
+                "vitesseSlideDown":"fast",
+                "nameSousListe":"sousListe",
+                "callback":null,
+                "couleurTexte":"black",
+                "couleurFond":"#FD6C9E"
+            }; // Param par défaut
+
+            var param = $.extend(defauts,options); //Fusionne les paramètres par défaut avec les param mis en options
 
             $("."+param.nameSousListe).hide();
-            $(this).find("a").mouseover(function(){
-                $(this).parent().siblings().find('.'+param.nameSousListe+':visible')
-                    .slideUp(param.vitesseSlideUp);
-                $(this).parent().find('ul').slideDown(param.vitesseSlideDown);
-            });
 
-            if(param.callback)
-            {
+            if(param.callback){
                 param.callback("ok");
             }
+
+            $(".sousListe").hide();
+
+            $(this).find("a").mouseover(function(){
+                $(this).parent().siblings().find('.sousListe').slideUp();
+                $(this).parent().find('ul').slideDown();
+            });
+
+            $(this).css("Color",param.couleurTexte);
+            $(this).css("background-color",param.couleurFond);
+
         });
-
-
     };
-})(jQuery);
+    $(".menu").menu({"callback":function(data){
+        console.log("fonction de callback " + data);}
+    });
+}
