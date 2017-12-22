@@ -11,6 +11,7 @@ function traitementDetection(faces) {
   $("span.nb").text(nb);
 
   $.each(faces, function (key, value) {
+    console.log(value);
     var section = $("section");
     var div = $("<div/>").appendTo(section);
     div.css({
