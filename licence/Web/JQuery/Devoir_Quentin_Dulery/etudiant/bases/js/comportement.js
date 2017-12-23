@@ -28,18 +28,14 @@ function actionClick() {
   var listeAutre = $("ul.listeAutre");
 
   listeSportifs.each(function(){
-    var li;
-    if ($(this).attr('class') == 'golf') {
-      li = $("<li/>").text($(this).text());
-      li.addClass($(this).attr('class'));
-      li.appendTo(listeGolf); 
-    }
-    else {
-      li = $("<li/>").text($(this).text());
-      li.addClass($(this).attr('class'));
-      li.appendTo(listeAutre);
-    }
-  })
+      var li;
+      if ($(this).attr('class') == 'golf') {
+        li = $("<li/>").text($(this).text()).addClass($(this).attr('class')).appendTo(listeGolf);
+      }
+      else {
+        li = $("<li/>").text($(this).text()).addClass($(this).attr('class')).appendTo(listeAutre);
+      }
+    }) 
 }
 
 /**
